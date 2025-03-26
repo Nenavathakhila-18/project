@@ -1,0 +1,105 @@
+
+.home-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027), 
+              url('https://source.unsplash.com/1600x900/?writing,books') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.description {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.cta-button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.3);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(238, 9, 121, 0.4);
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
